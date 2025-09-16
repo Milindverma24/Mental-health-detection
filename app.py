@@ -5,15 +5,20 @@ from email.mime.multipart import MIMEMultipart
 from streamlit_option_menu import option_menu
 import cohere
 import time
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # ============ API Keys and Email Config ============
-COHERE_API_KEY = "DHThvqaz2rHqkCWCni9ClDDvOhcQmYGQv8lhW7Te"  # Replace with your actual key
+
+
+COHERE_API_KEY = os.getenv("COHERE_API_KEY")
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
 co = cohere.Client(COHERE_API_KEY)
-
-sender_email = "anshverma24112005@gmail.com"  # Replace with your actual sender email
-receiver_email = "anshverma24112005@gmail.com"  # Replace with your actual receiver email
-email_password = "daccfzzlgziqzaxz"  # Replace with the 16-character App Password
-
 # ============ Streamlit Config ============
 st.set_page_config(page_title="Emotion Insight App", layout="wide")
 
