@@ -6,3 +6,4 @@ tqdm
 opencv-contrib-python
 notebook
 scikit-learn
+streamlit_option_menu
