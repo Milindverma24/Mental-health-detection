@@ -3,7 +3,7 @@ keras
 pandas
 numpy
 tqdm
-opencv-contrib-python
+opencv-contrib-python-headless
 notebook
 scikit-learn
 streamlit_option_menu
